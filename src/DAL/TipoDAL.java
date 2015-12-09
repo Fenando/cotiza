@@ -48,7 +48,7 @@ public class TipoDAL {
    public void delete(int id_tpo){
         try {
             PreparedStatement ps = new Conector().conn.prepareStatement(
-                    "delete from usuarios where usr_rut = ?");
+                    "delete from utipo where id_tpo = ?");
             ps.setInt(1, id_tpo);
             ps.executeUpdate();
         } catch (SQLException ex) {
